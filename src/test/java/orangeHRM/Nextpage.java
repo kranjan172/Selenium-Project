@@ -1,6 +1,7 @@
 package orangeHRM;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WindowType;
 import org.testng.annotations.Test;
 
 import pageobject.Loginpage;
@@ -9,8 +10,9 @@ import resources.CommonMethods;
 
 public class Nextpage extends Baseclass{
 
-  @Test
+  @Test(groups={"Regression","Smoke"})
   public void checkLogin() {
+	  
 	  Loginpage lpo=new Loginpage(driver);
 	  lpo.enterusername().sendKeys("Kunal");
 	  lpo.enterpassword().sendKeys("ppp");
